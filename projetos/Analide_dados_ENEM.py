@@ -81,3 +81,30 @@ print(coluna_sg_uf_residen.value_counts())
 # Visualizando a distribuição de candidatos por estado
 coluna_sg_uf_residen.hist(bins=50)
 # Gerando gráfico com a predominância de candidatos por estado
+
+coluna_in_gestante = microdados_enem_selecionados['IN_GESTANTE']
+# Gerando uma variável que armazena o a quantidade de candidatas 
+# declaradas gestantes 
+dist_in_gestante = coluna_in_gestante.value_counts()
+# Atribuindo as pessoas declaradas gestantes à uma variável
+print(dist_in_gestante)
+# Exibindo essa informação
+percent_in_gestante = [100*x/dist_in_gestante.sum() for x in dist_in_gestante]
+# Calculando o percentual de pessoas gestantes.
+print(percent_in_gestante)
+
+coluna_tp_sexo = microdados_enem_selecionados['TP_SEXO']
+# Criando variável que separa as pessoas por seu sexo
+dist_tp_sexo = coluna_tp_sexo.value_counts()
+print(dist_tp_sexo)
+percent_tp_sexo = [100*x/dist_tp_sexo.sum() for x in dist_tp_sexo]
+# Calculando a porcentagem entre feminino e masculino
+print(percent_tp_sexo)
+sexoF = dist_tp_sexo[0]
+nu_gest = dist_in_gestante[1]
+percent_gestantes = 100*nu_gest/sexoF
+percentNAOgestantes = 100 -percent_gestantes
+# Calculando a porcentagem de pessoas do sexo feminino declaradas
+# gestantes
+print(percent_gestantes)
+print(percentNAOgestantes)
