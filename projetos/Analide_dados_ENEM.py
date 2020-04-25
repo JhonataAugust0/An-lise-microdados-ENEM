@@ -52,3 +52,5 @@ colunas_selecionadas_enem = ['NO_MUNICIPIO_RESIDENCIA', 'CO_UF_RESIDENCIA', 'SG_
        'Q015', 'Q016', 'Q017', 'Q018', 'Q019', 'Q020', 'Q021', 'Q022',
        'Q023', 'Q024', 'Q025', 'Q026', 'Q027']
 print(colunas_selecionadas_enem)
+microdados_enem_selecionados = microdados_enem.filter(items=colunas_selecionadas_enem)
+# Atribuindo as colunas limitadas ao dataframe "microdados_enem_selecionandos"
