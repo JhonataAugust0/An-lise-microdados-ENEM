@@ -67,3 +67,8 @@ print(coluna_municipio_residência)
 # Mostrando os municipior distribuição
 print(coluna_municipio_residência.value_counts().sort_index())
 # Mostrando a distribuição de candidatos dentre os municipios 
+
+coluna_nu_idade = microdados_enem_selecionados['NU_IDADE']
+# Criando uma variável que armazena a idade dos candidatos
+print(coluna_nu_idade.value_counts().sort_index())
+# Visualizando a coluna em ordem crescente.
