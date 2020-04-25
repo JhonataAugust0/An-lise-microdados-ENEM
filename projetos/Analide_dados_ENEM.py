@@ -13,6 +13,7 @@ print(microdados_enem.columns.values)
 # do arquivo .csv, assim sendo possível selecioná-las e
 # visualizar apenas as que sejam interessante para uma certa
 # atividade.
+
 colunas_selecionadas_enem = ['NO_MUNICIPIO_RESIDENCIA', 'CO_UF_RESIDENCIA', 'SG_UF_RESIDENCIA',
        'NU_IDADE', 'TP_SEXO', 'TP_ESTADO_CIVIL', 'TP_COR_RACA',
        'TP_NACIONALIDADE', 'CO_MUNICIPIO_NASCIMENTO',
@@ -54,3 +55,15 @@ colunas_selecionadas_enem = ['NO_MUNICIPIO_RESIDENCIA', 'CO_UF_RESIDENCIA', 'SG_
 print(colunas_selecionadas_enem)
 microdados_enem_selecionados = microdados_enem.filter(items=colunas_selecionadas_enem)
 # Atribuindo as colunas limitadas ao dataframe "microdados_enem_selecionandos"
+print(microdados_enem_selecionados)
+
+coluna_municipio_residência = microdados_enem_selecionados['NO_MUNICIPIO_RESIDENCIA'] 
+# Criando uma variável que armazenará apenas os nomes da 
+# cidade que os candidatos moram. Isso é útil para saber os 
+# municipios que tiveram candidatos realizando o ENEM e 
+# tambpem para saber a distribuição da candidatos dentre os
+# municípios. 
+print(coluna_municipio_residência) 
+# Mostrando os municipior distribuição
+print(coluna_municipio_residência.value_counts().sort_index())
+# Mostrando a distribuição de candidatos dentre os municipios 
