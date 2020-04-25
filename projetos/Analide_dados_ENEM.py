@@ -72,3 +72,12 @@ coluna_nu_idade = microdados_enem_selecionados['NU_IDADE']
 # Criando uma variável que armazena a idade dos candidatos
 print(coluna_nu_idade.value_counts().sort_index())
 # Visualizando a coluna em ordem crescente.
+coluna_nu_idade.hist(bins=30)
+# Gerando gráfico com a predominância de idade dos candidatos
+
+coluna_sg_uf_residen = microdados_enem_selecionados['SG_UF_RESIDENCIA']
+# Gerando uma variável que armazena o estado em que cada candidato reside
+print(coluna_sg_uf_residen.value_counts())
+# Visualizando a distribuição de candidatos por estado
+coluna_sg_uf_residen.hist(bins=50)
+# Gerando gráfico com a predominância de candidatos por estado
