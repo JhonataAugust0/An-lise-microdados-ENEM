@@ -57,6 +57,8 @@ microdados_enem_selecionados = microdados_enem.filter(items=colunas_selecionadas
 # Atribuindo as colunas limitadas ao dataframe "microdados_enem_selecionandos"
 print(microdados_enem_selecionados)
 
+
+
 coluna_municipio_residência = microdados_enem_selecionados['NO_MUNICIPIO_RESIDENCIA'] 
 # Criando uma variável que armazenará apenas os nomes da 
 # cidade que os candidatos moram. Isso é útil para saber os 
